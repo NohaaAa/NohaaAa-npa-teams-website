@@ -1,0 +1,28 @@
+.header-container {
+    background: black url('../../assets/covers/gettyImages630320830.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:693px;
+    width:100%;
+    position: relative;
+}
+
+.header-container p {
+    color: #ffffff;
+    position: absolute;
+    
+}
+.header-container .sub-title {
+    font-size: 20px;
+    font-weight: normal;
+    right: 50px;
+    top: 80px;
+}
+.header-container .main-title {
+    font-size: 72px;
+    font-weight: 100;
+    right: 43px;
+    top: 131px;
+    width: 456px;
+    text-align: center;
+}

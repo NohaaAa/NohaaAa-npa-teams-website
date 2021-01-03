@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Myriad Pro Regular, serif;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: 'Myriad Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Regular'), url('./assets/fonts/myriad-pro-cufonfonts-webfont/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Roboto-Regular'), url('./assets/fonts/Roboto/Roboto-Regular.ttf') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Roboto-Medium'), url('./assets/fonts/Roboto/Roboto-Medium.ttf') format('woff');
+}
+  

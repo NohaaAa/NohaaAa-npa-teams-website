@@ -1,0 +1,81 @@
+.team-container {
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-side {
+    /* border: 1px solid black; */
+    width: auto;
+}
+
+.logo-side img{
+    width: 150px;
+    margin: 30px 30px 0 30px;
+}
+.details-side {
+    border-left: 1px solid lightgray;
+    padding: 20px;
+    /* width: 70%; */
+}
+
+.details-side h2 {
+    color: #555555;
+}
+
+.details-side p {
+    color: #555555;
+}
+.squads {
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.squad-item {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 18px 0;
+    padding: 10px;
+}
+
+.squad-item img {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.squad-item h3 {
+    color: rgb(60, 60, 149);
+    margin-left: 20px;
+
+}
+.squad-item ul {
+    list-style: none;
+    align-self: flex-start;
+}
+.squad-item ul li {
+    font-weight: 900;
+    padding: 3px 0;
+}
+.example-enter {
+    opacity: 0.01;
+  }
+  
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  
+  .example-leave {
+    opacity: 1;
+  }
+  
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }

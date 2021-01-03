@@ -1,0 +1,43 @@
+.subscribe-container {
+    /* border: 1px solid black; */
+    color: #242424;
+    text-align: center;
+    padding: 45px 0 51px;
+}
+
+.subscribe-container .main-title {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.subscribe-container .input-div {
+    width: 311px;
+    height: 52px;
+    border-radius: 20px;
+    margin-top: 17px;
+    text-align: center;
+    border: 3px solid #dddddd;
+    color: #dddddd;
+    font-size: 18px;
+    font-weight: normal;
+    font-family:  'Roboto-Regular', serif;
+}
+
+.subscribe-container .description {
+    margin: 18px auto 0;
+    width: 30%;
+    font-family:  'Roboto-Regular', serif;
+
+}
+
+.success {
+    margin-top: 10px;
+    font-size: 20px;
+    color: green;
+}
+
+.fail {
+    margin-top: 10px;
+    font-size: 20px;
+    color: red;
+}

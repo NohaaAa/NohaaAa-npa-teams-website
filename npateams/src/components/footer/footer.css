@@ -1,0 +1,16 @@
+.footer-container {
+    width: 100%;
+    background-color: #282828;
+    height: 46px;
+    padding: 9px 0 6px 54px;
+}
+
+.footer-container .footer-brand {
+    
+    width: 71px;
+    height: 31px;
+}
+
+.footer-brand img {
+    width: 100%;
+}
