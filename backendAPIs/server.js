@@ -14,9 +14,17 @@ db.on('error', (error) => console.error(error));
 app.use(express.json());
 db.once('open', () => console.log('connected to database'));
 //creating routes
-const teamsRouter = require('./routes/teams')
-app.use('/teams', teamsRouter)
+const teamsRouter = require('./routes/teams');
+const homeRouter = require('./routes/home');
+const subscriptionRouter = require('./routes/subscriptions');
 
+app.use('/api/teams', teamsRouter);
+app.use('/api/home', homeRouter);
+app.use('/api/subscriptions', subscriptionRouter);
+
+app.use('/*', (req, res) => {
+    res.status(404).send('<h1>NOT FOUND</h1>')
+})
 
 //server listen on port
 const PORT = 3030;

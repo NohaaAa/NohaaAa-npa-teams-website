@@ -86,7 +86,7 @@ async function getTeam(req, res, next) {
     try {
         team = await Team.findById(req.params.id)
         if (team == null) {
-            return res.status(404).json({ message: 'Cant find this team' })
+            return res.status(404).json({ message: 'Cannot find this team' })
         }
     } catch (err) {
         return res.status(500).json({ message: err.message })
