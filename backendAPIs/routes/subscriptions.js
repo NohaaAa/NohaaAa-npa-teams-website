@@ -17,15 +17,15 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const subscription = new Subscription({
         email: req.body.email,
-
     })
 
     try {
         const newSubscription = await subscription.save()
-        res.status(201).json(newSubscription)
+        res.status(201).json({ message: "new mail added!", newSubscription })
     } catch (err) {
         res.status(400).json({ message: err.message })
     }
 })
+
 
 module.exports = router

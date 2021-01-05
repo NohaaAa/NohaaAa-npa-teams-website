@@ -4,49 +4,52 @@
     width: 100%;
     margin: 0 auto;
     /* border: 1px solid black; */
+    padding: 1px;
     text-align: center;
-    justify-content: start;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.block-1, .block-2, .block-3, .block-4, .block-5, .block-6 {
+.block-0, .block-1, .block-2, .block-3, .block-4, .block-5 {
     position: relative;
 }
-.block-1 {
-    background: black url('../../assets/blocks/block-5.png') no-repeat;
+.block-0 {
+    /* background: black url('../../assets/blocks/block-5.png') no-repeat; */
     background-size: cover;
-    width: 700px;
+    width: 620px;
     height: 350px;
+    border: 1px solid black;
 }
-.block-2 {
-    background: black url('../../assets/blocks/block-4.png');
+.block-1 {
+    /* background: black url('../../assets/blocks/block-4.png'); */
     background-size: cover;
     width: 352px;
     height: 350px;
 }
-.block-3 {
-    background: black url('../../assets/blocks/block-3.png');
+.block-2 {
+    /* background: black url('../../assets/blocks/block-3.png'); */
     background-size: cover;
-    width: 293px;
+    width:409px;
     height: 350px;
 }
-.block-4 {
-    background: black url('../../assets/blocks/block-2.png');
+.block-3 {
+    /* background: black url('../../assets/blocks/block-2.png'); */
     background-size: cover;
-    width: 281px;
+    width: 432px;
+    height: 350px;
+    
+}
+.block-4 {
+    /* background: black url('../../assets/blocks/block-1.png'); */
+    background-size: cover;
+    width: 30%;
     height: 350px;
     
 }
 .block-5 {
-    background: black url('../../assets/blocks/block-1.png');
+    /* background: black url('../../assets/blocks/nba_wrap_01.png'); */
     background-size: cover;
-    width: 464px;
-    height: 350px;
-    
-}
-.block-6 {
-    background: black url('../../assets/blocks/nba_wrap_01.png');
-    background-size: cover;
-    width: 600px;
+    width: 500px;
     height: 350px;
 }
 .hover-div {
@@ -82,7 +85,7 @@
     transition: all 0.25s ease-in;
 }
 
-.block4, .block-5, .block-6 {
+.block-3, .block-4, .block-5 {
     
 }
 

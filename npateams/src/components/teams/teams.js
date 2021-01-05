@@ -19,8 +19,8 @@ class Teams extends Component {
         if (teamsList) {
             return teamsList.map((team) => {
                 return (
-                    <div className='team-logo' key={team.id}>
-                        <a href={`teams/${team.id}`}>
+                    <div className='team-logo' key={team._id}>
+                        <a href={`teams/${team._id}`}>
                             <img src={`../../assets/teams/${team.logo}`} alt={team.name} />
                         </a>
                     </div>
@@ -41,16 +41,17 @@ class Teams extends Component {
         )
     }
     componentDidMount = () => {
+        // console.log("Updated", this.props)
         this.props.getAllTeams();
+
     }
     componentDidUpdate = () => {
-        // console.log("Updated", this.props)
         this.props.filterTeams(this.state.keyword)
     }
 }
 
 const mapStateToProps = (state) => {
-    // console.log('TEAMS STATE', state.teams.teamsList)
+    // console.log('TEAMS STATE', state)
 
     return {
         teamsList: state.teams.teamsList

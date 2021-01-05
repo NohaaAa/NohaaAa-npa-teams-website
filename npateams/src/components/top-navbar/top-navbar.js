@@ -11,7 +11,7 @@ const TopNavbar = () => {
 
             <ul className="nav-menu">
                 <li className='nav-link' ><Link to="/teams" >TEAMS</Link></li>
-                <li className='nav-link' ><Link to=''>TOP SCORES</Link></li>
+                <li className='nav-link' ><Link to='/'>TOP SCORES</Link></li>
             </ul>
 
         </div>

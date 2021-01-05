@@ -2,10 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const morgan = require('morgan')
+var cors = require('cors')
 const app = express();
 
 //setup logger
 app.use(morgan('dev'))
+
+//using cors
+app.use(cors())
+
 //connecting with DB
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
 

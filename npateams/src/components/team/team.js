@@ -12,7 +12,7 @@ class Team extends Component {
     renderDetails = ({ teamDetail }) => {
         if (teamDetail) {
             return (
-                <div className='team-container' key={teamDetail.id + 6}>
+                <div className='team-container' key={teamDetail._id + 6}>
                     <div className='logo-side'>
                         <img src={`../../assets/teams/${teamDetail.logo}`} alt={teamDetail.name} />
                     </div>

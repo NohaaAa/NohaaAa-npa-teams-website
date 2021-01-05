@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
 
     try {
         const newTeam = await team.save()
-        res.status(201).json(newTeam)
+        res.status(201).json({ message: "a new team is added", newTeam })
     } catch (err) {
         res.status(400).json({ message: err.message })
     }
@@ -66,7 +66,7 @@ router.patch('/:id', getTeam, async (req, res) => {
 
     try {
         const updatedTeam = await res.team.save()
-        res.json(updatedTeam)
+        res.json({ message: "Updated!", updatedTeam })
     } catch {
         res.status(400).json({ message: err.message })
     }

@@ -44,7 +44,7 @@ router.patch('/:id', getHomeUnits, async (req, res) => {
 
     try {
         const updatedHome = await res.home.save()
-        res.json(updatedHome)
+        res.json({ message: 'Updated!', updatedHome })
     } catch {
         res.status(400).json({ message: err.message })
     }
