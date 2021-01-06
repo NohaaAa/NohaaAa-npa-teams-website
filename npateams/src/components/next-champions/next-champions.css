@@ -18,7 +18,10 @@
     /* border: 1px solid black; */
 
 }
-
+.vote {
+    color: #B21401;
+    font-size: 20px;
+}
 
 .team-item-1 img {
     height: 136px;
@@ -48,7 +51,7 @@
 .order {
     margin-bottom: 12px;
     font-size: 20px;
-    color: #282828;;
+    color: #282828;
 }
 
 .team-item-2 .order {

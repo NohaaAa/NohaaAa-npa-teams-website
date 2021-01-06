@@ -18,7 +18,7 @@
     background-size: cover;
     width: 620px;
     height: 350px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .block-1 {
     /* background: black url('../../assets/blocks/block-4.png'); */
@@ -29,13 +29,13 @@
 .block-2 {
     /* background: black url('../../assets/blocks/block-3.png'); */
     background-size: cover;
-    width:409px;
+    width:365px;
     height: 350px;
 }
 .block-3 {
     /* background: black url('../../assets/blocks/block-2.png'); */
     background-size: cover;
-    width: 432px;
+    width: 433px;
     height: 350px;
     
 }

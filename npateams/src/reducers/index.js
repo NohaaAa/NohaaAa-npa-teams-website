@@ -15,6 +15,9 @@ export const teams = (state = {}, action) => {
         case 'TEAM_DETAILS': {
             return { ...state, details: action.payload }
         }
+        case 'GET_POLL': {
+            return { ...state, polls: action.payload }
+        }
         case 'HOME': {
             return { ...state, homeUnits: action.payload }
         }

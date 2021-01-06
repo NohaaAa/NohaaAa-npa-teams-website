@@ -9,9 +9,7 @@ const Subscribe = (props) => {
     const [validate, setValidate] = useState('');
 
 
-    useEffect(() => {
-        // console.log(props)
-    });
+
 
     const validateEmail = (email) => {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -52,7 +50,7 @@ const Subscribe = (props) => {
     )
 }
 const mapStateToProps = (state) => {
-    console.log("STATE SUB", state.teams.sub)
+    // console.log("STATE SUB", state.teams.sub)
     return {
         msg: state.teams.sub
     }

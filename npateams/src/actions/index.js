@@ -83,6 +83,19 @@ export const deleteTeam = async (id) => {
         payload
     }
 }
+//get teams in poll
+export const getTeamsInPoll = async () => {
+
+    let res = await fetch(`${baseURL}/teams?poll=true&sort=count`);
+
+    let payload = await res.json();
+
+    return {
+        type: 'GET_POLL',
+        payload
+    }
+
+}
 
 //get all home units 
 export const getHomeUnits = async () => {
@@ -97,17 +110,19 @@ export const getHomeUnits = async () => {
 }
 //update a poll info
 export const updatePoll = async (pollInfo, id) => {
+
     console.log(pollInfo)
     let res = await fetch(`${baseURL}/home/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(pollInfo)
+        body: JSON.stringify({ poll: pollInfo })
     });
 
     let payload = await res.json();
 
     return {
         type: 'UPDATE_POLL',
+
         payload
     }
 }
