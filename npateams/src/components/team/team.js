@@ -3,10 +3,13 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import { CSSTransitionGroup } from 'react-transition-group' // ES6
-
+import UploadModal from './uploadModal';
 class Team extends Component {
     constructor() {
         super();
+    }
+
+    addAMember = () => {
     }
 
     renderDetails = ({ teamDetail }) => {
@@ -19,8 +22,10 @@ class Team extends Component {
                     <div className='details-side'>
                         <h2>{teamDetail.name}</h2>
                         <p>{teamDetail.description}</p>
+                        <UploadModal props={this.props} />
 
                         <div className='squads'>
+
                             {teamDetail.squad.map((s, index) => {
                                 return (
                                     <div className='squad-item' key={index + 3}>
@@ -61,6 +66,11 @@ class Team extends Component {
 
     componentDidMount() {
         this.props.getDetails(this.props.match.params.id)
+    }
+
+    componentDidUpdate() {
+        this.props.getDetails(this.props.match.params.id)
+
     }
 }
 

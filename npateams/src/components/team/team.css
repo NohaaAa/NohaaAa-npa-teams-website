@@ -18,6 +18,8 @@
 .details-side {
     border-left: 1px solid lightgray;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     /* width: 70%; */
 }
 
@@ -81,3 +83,31 @@
     opacity: 0.01;
     transition: opacity 300ms ease-in;
   }
+
+.upload-btn {
+    width: 170px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #006BB6;
+    background-color: #006BB6;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 3px 3px 3px gray;
+    margin-bottom: 10px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.upload-btn:focus {
+    outline: none;
+    
+}
+
+.upload-btn:hover {
+    background-color: whitesmoke;
+    color: #006BB6;
+    transition: all .3s ease-in-out;
+}
