@@ -22,10 +22,13 @@ db.once('open', () => console.log('connected to database'));
 const teamsRouter = require('./routes/teams');
 const homeRouter = require('./routes/home');
 const subscriptionRouter = require('./routes/subscriptions');
+const logoRouter = require('./routes/logos');
 
 app.use('/api/teams', teamsRouter);
 app.use('/api/home', homeRouter);
 app.use('/api/subscriptions', subscriptionRouter);
+app.use('/api/logos', logoRouter);
+
 
 app.use('/*', (req, res) => {
     res.status(404).send('<h1>NOT FOUND</h1>')

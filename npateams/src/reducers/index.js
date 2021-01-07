@@ -40,6 +40,9 @@ export const teams = (state = {}, action) => {
         case 'ADD_SUBSCRIPTION': {
             return { ...state, sub: action.payload }
         }
+        case 'UPLOAD_LOGO': {
+            return { ...state, logo: action.payload }
+        }
 
         default: {
             return state;

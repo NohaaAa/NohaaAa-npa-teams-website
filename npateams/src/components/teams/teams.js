@@ -3,6 +3,7 @@ import './teams.css'
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import { Link, Redirect } from 'react-router-dom';
+import AddTeamModal from './addTeamModal';
 class Teams extends Component {
     constructor() {
         super();
@@ -33,6 +34,8 @@ class Teams extends Component {
             <div className='teams-container'>
                 <div className='teams-search'>
                     <input type='text' value={this.state.keyword} placeholder='Search for a Team' onChange={this.handleChange} />
+
+                    <AddTeamModal props={this.props} />
                 </div>
                 <div className='all-teams'>
                     {this.renderAllTeams(this.props)}

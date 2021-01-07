@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const Team = require('../models/teams');
-var multer = require('multer');
-var fs = require('fs');
-var path = require('path');
 
 
 
@@ -25,7 +22,9 @@ router.get('/:id', getTeam, (req, res) => {
 })
 
 // Create new team
+
 router.post('/', async (req, res) => {
+    // console.log(req.file);
     const team = new Team({
         name: req.body.name,
         logo: req.body.logo,

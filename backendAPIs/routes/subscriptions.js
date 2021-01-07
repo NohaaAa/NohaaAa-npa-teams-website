@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
 
 //creat a new subscription email
 router.post('/', async (req, res) => {
+
     const subscription = new Subscription({
         email: req.body.email,
     })

@@ -52,6 +52,26 @@ export const addTeam = async (teamInfo) => {
     }
 }
 
+//upload a team logo 
+export const uploadLogo = async (data) => {
+    console.log("Uploaded", data)
+    var formdata = new FormData();
+    formdata.append("teamLogo", data);
+
+    let res = await fetch(`${baseURL}/logos/upload`, {
+        method: 'POST',
+        body: formdata,
+        redirect: 'follow'
+
+    });
+
+    let payload = await res.json();
+    console.log('PAYLOAD', payload)
+    return {
+        type: 'UPLOAD_LOGO',
+        payload
+    }
+}
 //update a team
 export const updateTeam = async (teamInfo, id) => {
     console.log(teamInfo)
