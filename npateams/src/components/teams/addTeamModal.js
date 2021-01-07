@@ -26,7 +26,9 @@ const AddTeamModal = ({ props }) => {
         // console.log(teamInfo);
         // console.log(imgData)
         props.addTeam(teamInfo);
-        props.uploadLogo(imgData)
+        if (imgData !== null) {
+            props.uploadLogo(imgData)
+        }
 
     }
 
