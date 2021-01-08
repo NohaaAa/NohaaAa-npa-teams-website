@@ -4,6 +4,7 @@ require('dotenv').config();
 const morgan = require('morgan')
 var cors = require('cors')
 const app = express();
+const path = require('path')
 
 //setup logger
 app.use(morgan('dev'))
@@ -30,10 +31,11 @@ app.use('/api/subscriptions', subscriptionRouter);
 app.use('/api/logos', logoRouter);
 
 
+app.use(express.static('npateams/build'));
 app.use('/*', (req, res) => {
     res.status(404).send('<h1>NOT FOUND</h1>')
 })
 
 //server listen on port
-const PORT = 3030;
+const PORT = process.env.PORT || 3030;
 app.listen(PORT, () => console.log(`Your server is running on: http://localhost:${PORT}/`));

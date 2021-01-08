@@ -80,14 +80,14 @@ const UploadModal = ({ props }) => {
                                 <input type='number' placeholder='RPG' onChange={handleChange} name='RPG' step='0.01' />
                             </Form.Field>
                         </Form.Group>
-                        <Form.Button>Submit</Form.Button>
+                        <Form.Button>ADD</Form.Button>
                     </Form>
 
                 </Modal.Description>
             </Modal.Content>
             <Modal.Actions>
                 <Button onClick={() => setOpen(false)} primary >
-                    ADD <Icon name='chevron right' />
+                    Close <Icon name='chevron right' />
                 </Button>
             </Modal.Actions>
         </Modal>

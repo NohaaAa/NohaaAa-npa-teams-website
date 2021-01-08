@@ -45,8 +45,8 @@ const AddTeamModal = ({ props }) => {
             trigger={<button type='button' className='upload-team-btn'><i class="plus icon"></i>Add A Team</button>}
         >
             <Modal.Header>Profile Picture</Modal.Header>
-            <Modal.Content image scrolling>
-                <Image size='small' src='../../assets/avatar.png' wrapped />
+            <Modal.Content scrolling>
+                {/* <Image size='small' src='../../assets/avatar.png' wrapped /> */}
 
                 <Modal.Description>
                     <p>
@@ -76,13 +76,13 @@ const AddTeamModal = ({ props }) => {
                         </Form.Group>
 
 
-                        <Form.Button>Submit</Form.Button>
+                        <Form.Button>ADD</Form.Button>
                     </Form>
                 </Modal.Description>
             </Modal.Content>
             <Modal.Actions>
                 <Button onClick={() => setOpen(false)} primary >
-                    ADD <Icon name='chevron right' />
+                    Close <Icon name='chevron right' />
                 </Button>
             </Modal.Actions>
         </Modal>

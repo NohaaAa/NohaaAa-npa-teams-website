@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Home = require('../models/home');
+const path = require('path');
+
 
 //get all home units
 router.get('/', async (req, res) => {
