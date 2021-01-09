@@ -5,7 +5,6 @@ import { createStore, applyMiddleware } from 'redux';
 import promiseMiddleware from 'redux-promise';
 import reducers from './reducers';
 import 'aos/dist/aos.css';
-import { Helmet } from "react-helmet";
 import TopNavbar from './components/top-navbar/top-navbar';
 import Footer from './components/footer/footer';
 import Teams from './components/teams/teams';
@@ -20,11 +19,7 @@ function App() {
 
       <BrowserRouter>
 
-        <Helmet>
-          <title>NPA TEAMS</title>
-          <meta charSet="utf-8" />
-          <meta name="description" content="React Application" />
-          <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
+        
           <TopNavbar />
           <Switch>
             <Route path='/teams/:id' component={Team} />
@@ -37,7 +32,6 @@ function App() {
             )} />
           </Switch>
           <Footer />
-        </Helmet>
 
       </BrowserRouter>
     </Provider>
