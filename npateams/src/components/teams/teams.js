@@ -12,7 +12,6 @@ class Teams extends Component {
         }
     }
     handleChange = (e) => {
-        console.log(e.target.value)
         this.setState({ keyword: e.target.value })
     }
 
@@ -21,9 +20,9 @@ class Teams extends Component {
             return teamsList.map((team) => {
                 return (
                     <div className='team-logo' key={team._id}>
-                        <a href={`teams/${team._id}`}>
+                        <Link href={`teams/${team._id}`}>
                             <img src={`../../assets/teams/${team.logo}`} alt={team.name} />
-                        </a>
+                        </Link>
                     </div>
                 )
             })
