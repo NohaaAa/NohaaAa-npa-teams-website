@@ -13,11 +13,12 @@ class Team extends Component {
     }
 
     renderDetails = ({ teamDetail }) => {
+        let baseImagesURL = 'https://npabackendapis.nohaa.repl.co/assets/teams'
         if (teamDetail) {
             return (
                 <div className='team-container' key={teamDetail._id + 6}>
                     <div className='logo-side'>
-                        <img src={`../../assets/teams/${teamDetail.logo}`} alt={teamDetail.name} />
+                        <img src={`${baseImagesURL}/${teamDetail.logo}`} alt={teamDetail.name} />
                     </div>
                     <div className='details-side'>
                         <h2>{teamDetail.name}</h2>

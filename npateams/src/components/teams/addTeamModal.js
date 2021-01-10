@@ -33,7 +33,7 @@ const AddTeamModal = ({ props }) => {
     }
 
     const handleUpload = async (e) => {
-        teamInfo['logo'] = e.target.files[0].name;
+        teamInfo['logo'] = e.target.files[0].name.toLowerCase();
         setTeamInfo(teamInfo)
         setImgData(e.target.files[0]);
     }

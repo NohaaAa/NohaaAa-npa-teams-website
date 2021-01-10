@@ -4,6 +4,7 @@ import './index.css';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css'
+import { Helmet } from 'react-helmet';
 
 // You can also use <link> for styles
 

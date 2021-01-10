@@ -3,10 +3,11 @@ const router = express.Router();
 const Logo = require('../models/logos');
 const fs = require('fs');
 const multer = require('multer');
+const path = require('path');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '../npateams/public/assets/teams')
+        cb(null, 'public/assets/teams')
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname.toLowerCase())

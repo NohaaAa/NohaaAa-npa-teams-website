@@ -11,11 +11,12 @@ class Highlights extends Component {
 
     }
     renderBlocks = ({ highlights }) => {
+        let baseImagesURL = 'https://npabackendapis.nohaa.repl.co/assets/blocks'
         if (highlights) {
             return highlights[0].blocks.map((block, index) => {
                 let d = ['1000', '600', '900', '500', '700', '900']
                 return (
-                    <div className={'block-' + index} data-aos='fade-up' data-aos-duration={d[index]} data-aos-anchor-placement="top-center" key={block._id} style={{ background: `black url('../../assets/blocks/${block.image}') no-repeat` }}>
+                    <div className={'block-' + index} data-aos='fade-up' data-aos-duration={d[index]} data-aos-anchor-placement="top-center" key={block._id} style={{ background: `black url('${baseImagesURL}/${block.image}') no-repeat` }}>
                         <div className="hover-div"></div>
                         <p className='title'>{block.title}</p>
                     </div>

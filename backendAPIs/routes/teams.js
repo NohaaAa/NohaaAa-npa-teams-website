@@ -6,7 +6,7 @@ const Team = require('../models/teams');
 
 // Get all teams
 router.get('/', async (req, res) => {
-    console.log(req.query);
+    // console.log(req.query);
     try {
         const teams = (req.query.poll && req.query.sort) ? await Team.find({ poll: true }).sort({ count: -1 }) : await Team.find();
         res.json(teams)

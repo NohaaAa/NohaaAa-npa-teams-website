@@ -30,12 +30,17 @@ app.use('/api/home', homeRouter);
 app.use('/api/subscriptions', subscriptionRouter);
 app.use('/api/logos', logoRouter);
 
+app.get('/', (req, res, next) => res.sendFile(path.join(__dirname, 'index.html')));
+//serve images from public/assets
+app.use('/assets', express.static('./public/assets/'));
 
-app.use(express.static('npateams/build'));
+// app.use(express.static('npateams/build'));
 app.use('/*', (req, res) => {
     res.status(404).send('<h1>NOT FOUND</h1>')
 })
 
 //server listen on port
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || config.httpPort;
+
 app.listen(PORT, () => console.log(`Your server is running on: http://localhost:${PORT}/`));

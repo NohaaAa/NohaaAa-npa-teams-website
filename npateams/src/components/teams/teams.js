@@ -12,16 +12,19 @@ class Teams extends Component {
         }
     }
     handleChange = (e) => {
+        console.log(e.target.value)
         this.setState({ keyword: e.target.value })
     }
 
     renderAllTeams = ({ teamsList }) => {
+        let baseImagesURL = 'https://npabackendapis.nohaa.repl.co/assets/teams'
         if (teamsList) {
             return teamsList.map((team) => {
+                // console.log(`teams/${team._id}`)
                 return (
                     <div className='team-logo' key={team._id}>
-                        <Link href={`teams/${team._id}`}>
-                            <img src={`../../assets/teams/${team.logo}`} alt={team.name} />
+                        <Link to={`teams/${team._id}`}>
+                            <img src={`${baseImagesURL}/${team.logo}`} alt={team.name} />
                         </Link>
                     </div>
                 )

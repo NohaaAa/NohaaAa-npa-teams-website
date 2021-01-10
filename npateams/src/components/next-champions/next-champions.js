@@ -70,10 +70,11 @@ class NextChampion extends Component {
     }
 
     renderResults = ({ pollList }) => {
+        let baseImagesURL = 'https://npabackendapis.nohaa.repl.co/assets/teams'
         if (pollList) {
             return pollList.map((p, i) => {
                 return (<div className={'team-item-' + (i + 1)} key={p._id + i + 4} onClick={() => this.increaseCount(p.count, p._id)} style={{ cursor: 'pointer' }}>
-                    <img src={`../../assets/teams/${p.logo}`} alt='team-logo' />
+                    <img src={`${baseImagesURL}/${p.logo}`} alt='team-logo' />
                     <p className='order'>{i + 1}ST</p>
                     <p className='votes'>{p.count} votes</p>
                 </div>)
