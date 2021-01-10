@@ -1,4 +1,6 @@
-const baseURL = 'http://localhost:3030/api';
+// const baseURL = 'http://localhost:3030/api';
+const baseURL = 'https://npabackendapis.nohaa.repl.co/api';
+
 
 export const getAllTeams = async () => {
 
